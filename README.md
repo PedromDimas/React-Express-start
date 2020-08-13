@@ -14,8 +14,17 @@ $ cd client && npm install
 ```
 
 ## Warning!
-Currently development command does not work you have to build the frontend to run ```npm run dev``` or comment this section out in [server/app.js](https://github.com/OfficialPedroDimasPortfolio/React-Express-start/blob/master/server/app.js) 
+Currently development command does not work you have to build the frontend to run ```npm run dev``` 
+
+```bash
+#go to the root directory
+
+$ cd server && npm run build-client
 ```
+
+<b>or</b>
+comment this section out in [server/app.js](https://github.com/OfficialPedroDimasPortfolio/React-Express-start/blob/master/server/app.js) 
+```javascript
 app.get('/*', (req, res) => {
   console.log("Redirecting")
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
